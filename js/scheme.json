@@ -1,0 +1,30 @@
+{
+    "questions":[
+        {
+            "type": "textField",
+            "question": "what is your name?",
+            "placeholder": "insert decription",
+            "default": ""
+        },
+        {
+            "type": "radioGroup",
+            "question": "what is your gender?",
+            "placeholder": "insert decription",
+            "default": "",
+            "answers": [ 
+                {
+                    "value":"male",
+                    "disabled": false
+                },
+                {
+                    "value":"female",
+                    "disabled": false
+                },
+                {
+                    "value":"robot",
+                    "disabled": true
+                }
+            ]
+        }
+    ]
+}

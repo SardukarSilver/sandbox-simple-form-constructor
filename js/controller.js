@@ -1,0 +1,4 @@
+function controller (){
+    render(config);
+    
+}
