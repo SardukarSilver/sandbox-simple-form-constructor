@@ -1,32 +1,30 @@
 body {
-    /* background: -webkit-linear-gradient(left, #474752 20px, transparent 1%) center, -webkit-linear-gradient(#474752 20px, transparent 1%) center, #636363;
-    background: linear-gradient(90deg, #474752 20px, transparent 1%) center, linear-gradient(#474752 20px, transparent 1%) center, #636363;
-    background-size: 22px 22px; */
-    background-color: #eb0c0c;
-  }
+  background-color: rgba(231, 231, 231, 0.925); !important
+}
 
-.main_content {
-    background: #fff;
-    min-height: 500px;
-    width: 100%;
-    margin: 25px;
-    padding: 30px;
+
+.main {
+  background: #fff;
+  min-height: 500px;
+  width: 100%;
+  margin: 25px;
+  padding: 30px;
 }
 
 .add_sngl_line_field_btn,
 .add_text_area_btn,
 .add_radio_list_btn {
-    background-color: #1c97f3;
-    border: none;
-    color: white;
-    padding: 8px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border:1px solid #186dad;
+  background-color: #1c97f3;
+  border: none;
+  color: white;
+  padding: 8px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border:1px solid #186dad;
 }
 
 .btn {
@@ -75,4 +73,17 @@ body {
 
 .btn-flat:hover {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4); 
+}
+
+.main_content span {
+  font-size:16px; 
+  font-weight:bold;
+}
+
+.form_menu {
+  text-align: center;
+}
+
+.fields {
+  text-align: left;
 }

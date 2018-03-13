@@ -1,64 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>form builder</title>
-    <link rel="stylesheet" href="styles\styles.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles\styles.css">
+    <title>Simple form constructor</title>
 </head>
-<body>
-    <div class="container">
-        <div class="main_content">
-        <form class="form_menu" id="jsForm">
-           <div class="command_menu">
-            <button class="add_sngl_line_field_btn">Add Line Field &nbsp;
-                <span style="font-size:16px; font-weight:bold;">+ </span>
-            </button>
-            <button class="add_text_area_btn">Add Text Area &nbsp;
-                <span style="font-size:16px; font-weight:bold;">+ </span>
-            </button>
-            <button class="add_radio_list_btn">Add Radio List &nbsp;
-                <span style="font-size:16px; font-weight:bold;">+ </span>
-            </button>
-            </div>
-        </form>
-        <ul>
-            <p></p>
-            <li>
-            <div class="input-group">
-                <div class="input-group-prepend">
-                    <div class="input-group-text">
-                        <input type="radio" aria-label="Radio button for following text input">
-                    </div>
-                </div>
-                <input type="text" class="form-control" aria-label="Text input with radio button">
-            </div>
-            </li>
-            <li>
-            <div class="input-group">
-                <div class="input-group-prepend">
-                    <div class="input-group-text">
-                        <input type="radio" aria-label="Radio button for following text input">
-                    </div>
-                </div>
-                <input type="text" class="form-control" aria-label="Text input with radio button">
-            </div>
-            </li>
-
-        </ul>
-
-
-
+<body >
+    <div class="container wrapper">
+        <div class="row">
+            <div class="main">
+                <form class="form_menu" id="jsForm">
+                    <button class="add_sngl_line_field_btn" id="jsAddSnglLine">Add Line Field &nbsp;<span>+</span></button>
+                    <button class="add_text_area_btn" id="jsAddTextArea">Add Text Area &nbsp;<span>+</span></button>
+                    <button class="add_radio_list_btn" id="jsAddRadioList">Add Radio List &nbsp;<span>+</span></button>
+                    <div class="fields" id="jsFields"></div>
+                </form>
+            </div>  
         </div>
     </div>
+
+<!-- scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="js\script.js"></script>
 </body>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-<script src="js\script.js"></script>
-
 </html>
