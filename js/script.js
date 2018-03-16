@@ -13,7 +13,7 @@ $(document).ready(function () {
         e.preventDefault();
         if (x < max_fields) {
             x++;
-            $(fieldaArea).append($('<div class="input-group mb-3" id="fld"><input type="text" class="form-control" placeholder="Field ' + x + '" aria-label="Field ' + x + '" aria-describedby="basic - addon2"><div class="input-group-append"><button class="btn btn-outline-secondary" id="delete" type="button">Delete</button></div></div >').hide().fadeIn(300));
+            $(fieldaArea).append($('<div class="input-group mb-3" id="fld"><input type="text" class="form-control" placeholder="Field ' + x + '" aria-label="Field ' + x + '" aria-describedby="basic - addon2"><div class="input-group-append"><button class="btn btn-outline-secondary" id="delete" type="button">Delete</button></div></div>').hide().fadeIn(300));
         } else {
             alert('You Reached the limits')
         }
