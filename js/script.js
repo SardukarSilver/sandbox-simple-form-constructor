@@ -70,38 +70,67 @@ $(document).ready(function () {
                         </div>\
                 </div>\
             </div>');
+            
+            $("#jsAddRadioField").on("click", (function (e) {
+                e.preventDefault();
+                if (y < maxRadioFields) {
+                    y++;
+                    $('#jsRadioGroup01').append('\
+                        <div class= "input-group mb-3" id="jsRadioFIeld">\
+                            <div class="input-group-prepend">\
+                                <div class="input-group-text">\
+                                    <input type="radio" aria-label="Radio button for following text input" name="rform">\
+                                </div>\
+                            </div>\
+                            <input type="text" class="form-control" aria-label="Text input with radio button">\
+                            <div class="input-group-append">\
+                                <button class="btn btn-outline-secondary" type="button" id="jsAddRadioField">\
+                                    <i class="fa fa-plus-circle"></i>\
+                                </button>\
+                                <button class="btn btn-outline-secondary" type="button" id="jsDeleteRadio">\
+                                    <i class="fa fa-trash-alt"></i>\
+                                </button>\
+                            </div>\
+                        </div>');
+                    $("#jsAddRadioField").on("click", (function(){}));
+                } else {
+                    alert('You Reached the limits')
+                }
+            })
+        );
+
         } else {
             alert('You Reached the limits')
         }
     });
 
 //add radio field
-    $(fieldArea).find("#jsAddRadioField").click(function (e){
-        e.preventDefault();
-        console.log('add field');
-        if (y < maxRadioFields) {
-            y++;
-            $('#jsRadioGroup01').append('\
-            <div class= "input-group mb-3" id="jsRadioFIeld">\
-                <div class="input-group-prepend">\
-                    <div class="input-group-text">\
-                        <input type="radio" aria-label="Radio button for following text input" name="rform">\
-                    </div>\
-                </div>\
-                <input type="text" class="form-control" aria-label="Text input with radio button">\
-                    <div class="input-group-append">\
-                        <button class="btn btn-outline-secondary" type="button" id="jsAddRadioField">\
-                            <i class="fa fa-plus-circle"></i>\
-                        </button>\
-                        <button class="btn btn-outline-secondary" type="button" id="jsDeleteRadio">\
-                            <i class="fa fa-trash-alt"></i>\
-                        </button>\
-                    </div>\
-            </div>');
-        } else {
-            alert('You Reached the limits')  
-        }
-    });
+    // $("#jsAddRadioField").click(function (e){
+    //     e.preventDefault();
+    //     console.log('add field');
+    //     if (y < maxRadioFields) {
+    //         y++;
+    //         $('#jsRadioGroup01').append('\
+    //         <div class= "input-group mb-3" id="jsRadioFIeld">\
+    //             <div class="input-group-prepend">\
+    //                 <div class="input-group-text">\
+    //                     <input type="radio" aria-label="Radio button for following text input" name="rform">\
+    //                 </div>\
+    //             </div>\
+    //             <input type="text" class="form-control" aria-label="Text input with radio button">\
+    //                 <div class="input-group-append">\
+    //                     <button class="btn btn-outline-secondary" type="button" id="jsAddRadioField">\
+    //                         <i class="fa fa-plus-circle"></i>\
+    //                     </button>\
+    //                     <button class="btn btn-outline-secondary" type="button" id="jsDeleteRadio">\
+    //                         <i class="fa fa-trash-alt"></i>\
+    //                     </button>\
+    //                 </div>\
+    //         </div>');
+    //     } else {
+    //         alert('You Reached the limits')  
+    //     }
+    // });
 
 
 //delete radio field
