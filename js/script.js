@@ -1,12 +1,12 @@
 $(document).ready(function () {
     var maxFields = 10;
     var maxRadioFields = 10;
-    var wrapper = $("#jsForm");
-    var fieldArea = $("#jsFields");
-    var addSnglLine = $("#jsAddSnglLine");
-    var addTextArea = $("#jsAddTextArea");
-    var addRadioList = $("#jsAddRadioList");
-    var addRadioField = $("#jsFields").find("#jsAddRadioField");
+    var wrapper = $(".jsForm");
+    var fieldArea = $(".jsFields");
+    var addSnglLine = $(".jsAddSnglLine");
+    var addTextArea = $(".jsAddTextArea");
+    var addRadioList = $(".jsAddRadioList");
+    var addRadioField = $(".jsFields").find(".jsAddRadioField");
   
     var x = 0;
     var y = 0;
@@ -17,10 +17,10 @@ $(document).ready(function () {
         if (x < maxFields) {
             x++;
             $(fieldArea).append($('\
-            <div class="input-group mb-3" id="fld">\
+            <div class="input-group mb-3 fld">\
                 <input type="text" class="form-control" placeholder="Field ' + x + '" aria-label="Field ' + x + '" aria-describedby="basic - addon2">\
                 <div class="input-group-append">\
-                    <button class="btn btn-outline-secondary" id="delete" type="button">Delete</button>\
+                    <button class="btn btn-outline-secondary delete" type="button">Delete</button>\
                 </div>\
             </div>').hide().fadeIn(300));
         } else {
@@ -34,12 +34,12 @@ $(document).ready(function () {
         if (x < maxFields) {
             x++;
             $(fieldArea).append('\
-            <div class="input-group mb-3" id="fld">\
+            <div class="input-group mb-3 fld">\
                 <div class="input-group-prepend">\
                     <span class="input-group-text">Field ' + x + '</span>\
                 </div>\
                 <textarea class="form-control" aria-label="With textarea"></textarea>\
-                <button class="btn btn-outline-secondary" id="delete">Delete</button>\
+                <button class="btn btn-outline-secondary delete">Delete</button>\
             </div>');
         } else {
             alert('You Reached the limits')
@@ -52,8 +52,8 @@ $(document).ready(function () {
         if (x < maxFields) {
             x++;
             $(fieldArea).append('\
-            <div id="jsRadioGroup01">\
-                <div class= "input-group mb-3" id="jsRadioFIeld">\
+            <div class="jsRadioGroup01">\
+                <div class= "input-group mb-3 jsRadioFIeld">\
                     <div class="input-group-prepend">\
                         <div class="input-group-text">\
                             <input type="radio" aria-label="Radio button for following text input" name="rform">\
@@ -61,22 +61,22 @@ $(document).ready(function () {
                     </div>\
                     <input type="text" class="form-control" aria-label="Text input with radio button">\
                         <div class="input-group-append">\
-                            <button class="btn btn-outline-secondary" type="button" id="jsAddRadioField">\
+                            <button class="btn btn-outline-secondary jsAddRadioField" type="button">\
                                 <i class="fa fa-plus-circle"></i>\
                             </button>\
-                            <button class="btn btn-outline-secondary" type="button" id="jsDeleteRadio">\
+                            <button class="btn btn-outline-secondary jsDeleteRadio" type="button">\
                                 <i class="fa fa-trash-alt"></i>\
                             </button>\
                         </div>\
                 </div>\
             </div>');
             
-            $("#jsAddRadioField").on("click", (function (e) {
+            $(".jsAddRadioField").on("click", (function (e) {
                 e.preventDefault();
                 if (y < maxRadioFields) {
                     y++;
-                    $('#jsRadioGroup01').append('\
-                        <div class= "input-group mb-3" id="jsRadioFIeld">\
+                    $('.jsRadioGroup01').append('\
+                        <div class= "input-group mb-3 jsRadioFIeld">\
                             <div class="input-group-prepend">\
                                 <div class="input-group-text">\
                                     <input type="radio" aria-label="Radio button for following text input" name="rform">\
@@ -84,10 +84,10 @@ $(document).ready(function () {
                             </div>\
                             <input type="text" class="form-control" aria-label="Text input with radio button">\
                             <div class="input-group-append">\
-                                <button class="btn btn-outline-secondary" type="button" id="jsAddRadioField">\
+                                <button class="btn btn-outline-secondary jsAddRadioField" type="button">\
                                     <i class="fa fa-plus-circle"></i>\
                                 </button>\
-                                <button class="btn btn-outline-secondary" type="button" id="jsDeleteRadio">\
+                                <button class="btn btn-outline-secondary jsDeleteRadio" type="button">\
                                     <i class="fa fa-trash-alt"></i>\
                                 </button>\
                             </div>\
@@ -111,7 +111,7 @@ $(document).ready(function () {
     //     if (y < maxRadioFields) {
     //         y++;
     //         $('#jsRadioGroup01').append('\
-    //         <div class= "input-group mb-3" id="jsRadioFIeld">\
+    //         <div class= "input-group mb-3 jsRadioFIeld">\
     //             <div class="input-group-prepend">\
     //                 <div class="input-group-text">\
     //                     <input type="radio" aria-label="Radio button for following text input" name="rform">\
@@ -119,10 +119,10 @@ $(document).ready(function () {
     //             </div>\
     //             <input type="text" class="form-control" aria-label="Text input with radio button">\
     //                 <div class="input-group-append">\
-    //                     <button class="btn btn-outline-secondary" type="button" id="jsAddRadioField">\
+    //                     <button class="btn btn-outline-secondary jsAddRadioField" type="button">\
     //                         <i class="fa fa-plus-circle"></i>\
     //                     </button>\
-    //                     <button class="btn btn-outline-secondary" type="button" id="jsDeleteRadio">\
+    //                     <button class="btn btn-outline-secondary" type="button jsDeleteRadio">\
     //                         <i class="fa fa-trash-alt"></i>\
     //                     </button>\
     //                 </div>\
@@ -134,18 +134,18 @@ $(document).ready(function () {
 
 
 //delete radio field
-    $(wrapper).on("click", "#jsDeleteRadio", function (e) {
+    $(wrapper).on("click", ".jsDeleteRadio", function (e) {
         e.preventDefault();
-        $(this).closest('#jsRadioFIeld').fadeOut(300, () => { $(this).remove()});
+        $(this).closest('.jsRadioFIeld').fadeOut(300, () => { $(this).remove()});
         x--;
     })
 
 
 
 //delete
-    $(wrapper).on("click", "#delete", function (e) {
+    $(wrapper).on("click", ".delete", function (e) {
         e.preventDefault(); 
-        $(this).closest('#fld').fadeOut(300, () => {$(this).remove()}); 
+        $(this).closest('.fld').fadeOut(300, () => {$(this).remove()}); 
         x--;
     })
 });
